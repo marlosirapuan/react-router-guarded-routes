@@ -13,7 +13,7 @@ export interface GuardedRouteConfig {
   [props: PropertyKey]: any
 }
 
-export interface GuardedRouteObject extends RouteObject, GuardedRouteConfig {
+export interface GuardedRouteObject extends GuardedRouteConfig {
   children?: GuardedRouteObject[]
 }
 

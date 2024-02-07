@@ -28,9 +28,9 @@ const Home: React.FC = () => {
       <GuardedRoutes>
         <GuardProvider
           fallback={<div>loading home...</div>}
-          inject={useInject}
+          useInject={useInject}
           guards={[
-            (to, from, next, { injectedValue }) => {
+            (to, _from, next, { injectedValue }) => {
               console.log(injectedValue)
               if (to.location.pathname.includes('ban')) {
                 setTimeout(() => {
